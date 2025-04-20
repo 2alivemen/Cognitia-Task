@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandothiya Pearls & Jewels - Wishlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* Header Styles */
+        .top-bar {
+            background-color: #a91c1c;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navigation {
+            display: flex;
+            margin-left: 50px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .tagline {
+            font-size: 14px;
+        }
+
+        .user-actions {
+            margin-right: 50px;
+        }
+
+        .user-actions a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Logo and Search Bar */
+        .logo-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 220px;
+        }
+
+        .search-cart {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .search-box input {
+            padding: 8px 35px 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            width: 200px;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+
+        .wishlist-icon, .cart-icon {
+            font-size: 20px;
+            margin-left: 20px;
+            color: #a91c1c;
+            position: relative;
+        }
+        
+        .icon-with-text {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .icon-with-text i {
+            margin-right: 5px;
+        }
+
+        /* Categories Menu */
+        .categories-menu {
+            background-color: #a91c1c;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .category {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .category i {
+            margin-left: 5px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 50px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            margin: 0 5px;
+        }
+
+        /* Wishlist Content */
+        .wishlist-title {
+            padding: 0 50px 20px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+            padding: 0 50px 50px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            position: relative;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #a91c1c;
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-brand {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+
+        .rating i.active {
+            color: #ffb100;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+
+        .whatsapp-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navigation, .user-actions {
+                margin: 0 20px;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .wishlist-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                padding: 0 20px 30px;
+            }
+            
+            .breadcrumb, .wishlist-title {
+                padding: 15px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .navigation {
+                margin-bottom: 10px;
+            }
+            
+            .categories-menu {
+                flex-wrap: wrap;
+            }
+            
+            .category {
+                margin: 5px 10px;
+            }
+            
+            .wishlist-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <!-- <div class="top-bar">
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="tagline">Pearls & Jewels with loved ones</div>
+        <div class="user-actions">
+            <a href="#">Login</a> / <a href="#">Register</a>
+        </div>
+    </div> -->
+
+    <!-- Logo and Search Bar -->
+    <!-- <div class="logo-section">
+        <div class="logo">
+            <img src="/api/placeholder/220/60" alt="Mandothiya Logo">
+        </div>
+        <div class="search-cart">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <a href="#" class="icon-with-text">
+                <i class="fas fa-heart wishlist-icon"></i>
+                <span>Wishlist</span>
+            </a>
+            <a href="#" class="icon-with-text">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                <span>Cart</span>
+            </a>
+        </div>
+    </div> -->
+
+    <!-- Categories Menu -->
+    <!-- <div class="categories-menu">
+        <a href="#" class="category">Royale Pearls Collection <i class="fas fa-chevron-down"></i></a>
+        <a href="#" class="category">Rajwada Collection <i class="fas fa-chevron-down"></i></a>
+        <a href="#" class="category">Jodha Collection <i class="fas fa-chevron-down"></i></a>
+        <a href="#" class="category">Diana Collection <i class="fas fa-chevron-down"></i></a>
+    </div> -->
+
+    <div id="header-container"></div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> <span>/</span> Wishlist
+    </div>
+
+    <!-- Wishlist Content -->
+    <h1 class="wishlist-title">Wishlist</h1>
+    <div class="wishlist-grid" id="wishlistGrid">
+        <!-- Products will be added here dynamically -->
+    </div>
+
+    <div id="footer-container"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- <a href="#" class="whatsapp-float">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+        <span>Talk to us?</span>
+    </a> -->
+
+    <script>
+        // Sample wishlist data
+        const wishlistItems = [
+            {
+                id: 1,
+                title: '1 Row pearls Mala with pendant set',
+                brand: 'Mandothiya',
+                image: '../images/moonstonemala.png',
+                price: '₹ 6,700',
+                originalPrice: '',
+                rating: 0
+            },
+            {
+                id: 2,
+                title: 'One Row Fresh Water Natural Round Pearl Mala',
+                brand: 'Mandothiya',
+                image: '../images/moonstonemala.png',
+                price: '₹ 11,700',
+                originalPrice: '₹ 15,600',
+                rating: 0
+            },
+            {
+                id: 3,
+                title: 'Pearl and Ruby Necklace Set',
+                brand: 'Mandothiya',
+                image: '../images/moonstonemala.png',
+                price: '₹ 8,900',
+                originalPrice: '₹ 12,000',
+                rating: 4
+            },
+            {
+                id: 4,
+                title: 'Diana Collection Special Pearl Earrings',
+                brand: 'Mandothiya',
+                image: '../images/bangles.png',
+                price: '₹ 3,500',
+                originalPrice: '',
+                rating: 5
+            }
+        ];
+
+        // Function to render wishlist items
+        function renderWishlistItems() {
+            const wishlistGrid = document.getElementById('wishlistGrid');
+            wishlistGrid.innerHTML = '';
+
+            if (wishlistItems.length === 0) {
+                wishlistGrid.innerHTML = '<div class="empty-wishlist">Your wishlist is empty</div>';
+                return;
+            }
+
+            wishlistItems.forEach(item => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+                productCard.dataset.id = item.id;
+
+                // Generate stars for rating
+                let stars = '';
+                for (let i = 1; i <= 5; i++) {
+                    stars += `<i class="fas fa-star ${i <= item.rating ? 'active' : ''}"></i>`;
+                }
+
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="heart-icon" onclick="removeFromWishlist(${item.id})">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${item.title}</h3>
+                        <p class="product-brand">${item.brand}</p>
+                        <div class="rating">
+                            ${stars}
+                        </div>
+                        <div class="price-container">
+                            <div>
+                                ${item.originalPrice ? `<span class="original-price">${item.originalPrice}</span>` : ''}
+                                <span class="price">${item.price}</span>
+                            </div>
+                            <div class="heart-count">
+                                <i class="far fa-heart"></i>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                wishlistGrid.appendChild(productCard);
+            });
+        }
+
+        // Function to remove item from wishlist
+        function removeFromWishlist(itemId) {
+            const index = wishlistItems.findIndex(item => item.id === itemId);
+            if (index !== -1) {
+                wishlistItems.splice(index, 1);
+                renderWishlistItems();
+            }
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderWishlistItems();
+        });
+    </script>
+     <script src="../js/load-header.js"></script>
+     <script src="../js/load-footer.js"></script>
+ 
+</body>
+</html>

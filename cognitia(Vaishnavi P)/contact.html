@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Mandothiya Pearls</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar d-flex justify-content-between align-items-center px-3 py-2 text-white">
+    <div class="d-flex gap-4">
+      <a href="index.html" class="text-white text-decoration-none">Home</a>
+      <a href="shop.html" class="text-white text-decoration-none">Shop</a>
+      <a href="about.html" class="text-white text-decoration-none">About Us</a>
+      <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+    </div>
+
+    <div style="width: 400px; overflow: hidden; white-space: nowrap;">
+      <div style="display: inline-block; padding-left: 100%; animation: marquee 10s linear infinite; font-size: 14px;">
+        ● Celebrate this Festive season Upto 50% Off with Exciting inaug
+      </div>
+    </div>
+
+    <div>
+      <a href="#" class="text-white text-decoration-none">Login</a> /
+      <a href="#" class="text-white text-decoration-none">Register</a>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+    <div class="container d-flex justify-content-center align-items-center">
+      <a class="navbar-brand" href="#">
+        <div style="text-align: center;">
+          <img src="Logo1.png" height="50" alt="Logo"/>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Category Navbar -->
+  <nav class="navbar navbar-expand-lg category-navbar">
+    <div class="container">
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Royale Pearls Collection</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Fresh Natural Pearls</a></li>
+              <li><a class="dropdown-item" href="#">Saltwater Natural Pearls (Southsea)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Rajwada Collection</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Natural Pearls Combination Strands</a></li>
+              <li><a class="dropdown-item" href="#">Rajwada Collection</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Jodha Collection</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Jodha Collection</a></li>
+              <li><a class="dropdown-item" href="#">Semi Precious Stones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Diana Collection</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bangles</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="container mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-12 col-md-6 mb-4">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Name" required>
+          <input type="email" class="form-control mb-3" placeholder="Email Address" required>
+          <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
+
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="terms" required>
+            <label class="form-check-label" for="terms">
+              I have read and agree to the <a href="#">Terms & Conditions</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-danger w-100" style="background-color: #a01515;">Submit</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-12 col-md-6 mb-4">
+        <p><i class="bi bi-telephone-fill"></i> +91 -9550622555</p>
+        <p><i class="bi bi-envelope-fill"></i> info@mandothiyapearl.com</p>
+        <p><i class="bi bi-geo-alt-fill"></i> Mandothiya Pearls & Jewels Pvt Ltd.<br />
+          2-4-27/3, A.S. Abdul Khader Arcade, M.G. Road, Secunderabad – 500003, Telangana, India</p>
+
+        <div class="d-flex gap-3 mt-3 mb-4">
+          <a href="#"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#"><i class="bi bi-x fs-4"></i></a>
+          <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="col-12">
+        <div class="map-responsive">
+          <iframe src="https://www.google.com/maps?q=Mandothiya%20Pearls%20%26%20Jewels%20Secunderabad&output=embed"
+            width="100%" height="250" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- WhatsApp Floating Icon (optional) -->
+  <div class="whatsapp-float">
+    <a href="#" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      <div>Talk to us?</div>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="newsletter">
+        <h3>Join Our Newsletter</h3>
+        <p>Join our subscribers list to get the latest news, updates and special offers directly in your inbox</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+  
+      <div class="company-info">
+        <img src="Logo1.png" alt="Mandothiya Logo" class="logo" />
+        <p>We are one of the Leading Manufacturers and Retailers of high-quality Natural Pearls and Precious Stones Jewellery. Innovative Designs, Carving Craftsmanship, Impeccable Quality & Real value for money and Service. Passion for craftsmanship and attention to detail set us apart in the industry.</p>
+        <p><strong>Address</strong><br>No. 2-4-27/3, M.G. Road, A. S. Abdul Khader Arcade, Hyderabad - 500003, Telangana, India</p>
+      </div>
+  
+      <div class="footer-links">
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Royale Pearls Collection</a></li>
+            <li><a href="#">Rajwada Collection</a></li>
+            <li><a href="#">Jodha Collection</a></li>
+            <li><a href="#">Diana Collection</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Cancellations policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="payment-info">
+        <p>a. Online Payment via Credit or Debit Cards.<br>
+           b. UPI payment<br>
+           c. Simpl, LazyPay, PayLater EMI Payment Option is their.</p>
+        <div class="payments">
+          <img src="visa.png" alt="Visa">
+          <img src="mastercard.png" alt="MasterCard">
+          <img src="lazypay.png" alt="LazyPay">
+          <!-- Add other logos as needed -->
+        </div>
+      </div>
+      <div class="socials">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  
+    <div class="footer-credit">
+      <p>Copyright 2024 Mandothiya – All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

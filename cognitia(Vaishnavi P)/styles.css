@@ -1,0 +1,263 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-bar {
+  background-color: #a01515;
+  color: white;
+}
+
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.category-navbar {
+  background-color: #a01515;
+}
+
+.category-navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.register-form input {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* Red tick for checkbox */
+input[type="checkbox"]:checked {
+  accent-color: #a01515;
+}
+
+/*search,wishlist and cart*/
+@media (max-width: 576px) {
+  .navbar .fw-medium {
+    display: none;
+  }
+  .navbar .vr {
+    display: none;
+  }
+}
+
+
+
+/* WhatsApp icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* Login link in red */
+.login-link {
+  color: #a01515;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Terms & Conditions styling */
+.terms-link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*footer*/
+.footer {
+  background-color: #8d1619;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 40px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column.logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .right img {
+  height: 24px;
+  margin-left: 10px;
+}
+
+/* contact page Css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea {
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/*about us */
+/* Optional: Add your custom styles here */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  background-color: #fff;
+}
+
+h2 {
+  color: #a01515;
+}
+/*contact us footer*/
+.footer {
+  background-color: #7b0000;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.newsletter {
+  flex: 1 1 300px;
+  margin-right: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+.newsletter button {
+  padding: 10px 15px;
+  background-color: #a30000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.company-info {
+  flex: 2 1 400px;
+  margin: 20px 0;
+}
+
+.footer-links {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.payment-info {
+  flex: 2 1 400px;
+}
+
+.payments img {
+  height: 30px;
+  margin: 5px;
+}
+
+.socials {
+  flex: 1 1 200px;
+}
+
+.socials a {
+  color: white;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-credit {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #fff;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.company-info img {
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+

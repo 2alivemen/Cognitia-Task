@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.head.appendChild(faLink);
   }
 
-  console.log('Loading header: fetching nav.html');
-  fetch('nav.html')
+  console.log('Loading footer: fetching footer.html');
+  fetch('footer.html')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -31,16 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.text();
     })
     .then(data => {
-      console.log('Header fetched successfully');
+      console.log('Footer fetched successfully');
       const parser = new DOMParser();
       const doc = parser.parseFromString(data, 'text/html');
       const bodyContent = doc.body.innerHTML;
-      const headerContainer = document.getElementById('header-container');
-      if (headerContainer) {
-        headerContainer.innerHTML = bodyContent;
+      const footerContainer = document.getElementById('footer-container');
+      if (footerContainer) {
+        footerContainer.innerHTML = bodyContent;
       }
     })
     .catch(error => {
-      console.error('Error loading header:', error);
+      console.error('Error loading footer:', error);
     });
 });

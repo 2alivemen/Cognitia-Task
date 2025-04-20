@@ -6,6 +6,7 @@
   <title>Cart</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     body {
       font-family: 'Merriweather', serif;
@@ -21,7 +22,7 @@
 
       <!-- Cart Item -->
       <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
-        <img src="https://via.placeholder.com/100" alt="Product Image" class="w-20 h-20 object-cover rounded mr-4" />
+        <img src="../images/moonstonemala.png" alt="Product Image" class="w-20 h-20 object-cover rounded mr-4" />
         <div class="flex-grow">
           <h2 class="text-lg font-semibold">Moon Stone With Real Blue Sapphire Stone Mala</h2>
           <p class="text-red-500 text-sm">Out of Stock</p>
@@ -61,14 +62,14 @@
 
       <!-- Payment Logos -->
       <div class="mt-4 flex items-center space-x-2">
-        <img src="https://via.placeholder.com/50x20" alt="Simpl" />
-        <img src="https://via.placeholder.com/50x20" alt="Lazypay" />
+        <img src="../images/paymentlogo.png" alt="payment" />
+        <!-- <img src="https://via.placeholder.com/50x20" alt="Lazypay" />
         <img src="https://via.placeholder.com/50x20" alt="Epaylater" />
         <img src="https://via.placeholder.com/50x20" alt="Visa" />
         <img src="https://via.placeholder.com/50x20" alt="Mastercard" />
         <img src="https://via.placeholder.com/50x20" alt="Maestro" />
         <img src="https://via.placeholder.com/50x20" alt="American Express" />
-        <img src="https://via.placeholder.com/50x20" alt="Discover" />
+        <img src="https://via.placeholder.com/50x20" alt="Discover" /> -->
       </div>
 
       <!-- Discount Coupon -->
@@ -89,7 +90,7 @@
       </div> -->
     </div>
       </div>
-<script src="../js/load-header.js"></script>
+      <div id="footer-container"></div>
       <script>
         let quantity = parseInt(document.getElementById('quantity').innerText);
         let unitPrice = 8160;
@@ -121,6 +122,9 @@
           location.reload();
         }
       </script>
-      
+      <script src="../js/load-header.js"></script>
+      <script src="../js/load-footer.js"></script>
+  
+
     </body>
 </html>
