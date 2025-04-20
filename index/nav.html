@@ -80,7 +80,7 @@
 <div class="bg-[#9b111e] text-white flex justify-center space-x-10 py-3 text-base">
   <div class="relative group">
     <button class="focus:outline-none">Royale Pearls Collection <i class="fas fa-chevron-down text-xs ml-1"></i></button>
-    <div class="absolute left-0 mt-2 hidden group-hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
+    <div class="absolute left-0 mt-2 hidden group-hover:block hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
       <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Fresh water Pearls</a>
       <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Salt water Pearls</a>
     </div>
@@ -88,7 +88,7 @@
 
   <div class="relative group">
     <button class="focus:outline-none">Rajwada Collection <i class="fas fa-chevron-down text-xs ml-1"></i></button>
-    <div class="absolute left-0 mt-2 hidden group-hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
+    <div class="absolute left-0 mt-2 hidden group-hover:block hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
       <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Natural Pearl Combination</a>
       <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">South Sea Pearl combination</a>
     </div>
@@ -96,7 +96,7 @@
 
   <div class="relative group">
     <button class="focus:outline-none">Jodha Collection <i class="fas fa-chevron-down text-xs ml-1"></i></button>
-    <div class="absolute left-0 mt-2 hidden group-hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
+    <div class="absolute left-0 mt-2 hidden group-hover:block hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
       <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Precious Stones</a>
       <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Semi Precious stones</a>
     </div>
@@ -104,11 +104,39 @@
 
   <div class="relative group">
     <button class="focus:outline-none">Diana Collection <i class="fas fa-chevron-down text-xs ml-1"></i></button>
-    <div class="absolute left-0 mt-2 hidden group-hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
+    <div class="absolute left-0 mt-2 hidden group-hover:block hover:block bg-white text-black shadow-lg rounded py-2 w-48 z-20">
       <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Bangles</a>
     </div>
   </div>
 </div>
 
+<script>
+  document.querySelectorAll('.relative.group').forEach(menu => {
+    let timeoutId;
+
+    const submenu = menu.querySelector('div.absolute');
+
+    menu.addEventListener('mouseenter', () => {
+      clearTimeout(timeoutId);
+      submenu.classList.remove('hidden');
+    });
+
+    menu.addEventListener('mouseleave', () => {
+      timeoutId = setTimeout(() => {
+        submenu.classList.add('hidden');
+      }, 300);
+    });
+
+    submenu.addEventListener('mouseenter', () => {
+      clearTimeout(timeoutId);
+    });
+
+    submenu.addEventListener('mouseleave', () => {
+      timeoutId = setTimeout(() => {
+        submenu.classList.add('hidden');
+      }, 300);
+    });
+  });
+</script>
 </body>
 </html>
