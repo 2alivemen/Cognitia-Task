@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  .category-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .category-card {
+    width: 220px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    color: #6b4b30;
+    font-weight: bold;
+  }
+  
+  .category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .offers-title {
+    text-align: center;
+    font-size: 28px;
+    color: #a61919;
+    margin: 40px 0 20px;
+  }
+  
+  .offers-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px 40px;
+  }
+  
+  .offer-card {
+    width: 230px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .offer-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .discount {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d4932c;
+    color: white;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .product-name {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #c11b1b;
+  }
+  
+  .brand {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+  }
+ 
+.whatsapp-float {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 30px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .whatsapp-float img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .whatsapp-float span {
+    margin-left: 10px;
+    color: #000;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.05);
+  }
+  
+  

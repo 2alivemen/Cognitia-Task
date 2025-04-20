@@ -11,53 +11,80 @@
         font-family: 'Merriweather', serif;
       }
       </style>
-    <title>Bangles - Mandothiya Pearls & Jewels</title>
+    <title>Shop</title>
 </head>
+<!DOCTYPE html>
+
 <body>
-    <div id="header-container"></div>
-    <h2>Bangles Collection</h2>
 
-    <main>
-        <section class="sidebar">
-            <h2>Bangles</h2>
-            <h3>Category</h3>
-            <p><strong>All Bangles</strong></p>
-            <h3>Price</h3>
-            <label for="min">Min:</label>
-            <input type="text" id="min" placeholder="Min">
-            <label for="max">Max:</label>
-            <input type="text" id="max" placeholder="Max">
-        </section>
+<div id="header-container"></div>
 
-        <section class="products">
-            <div class="product" tabindex="0">
-                <img src="../images/bangles.png" alt="Single layered Pearl Bangle set">
-                <h3>Single layered Pearl Bangle set</h3>
-                <p>₹ 7,500</p>
-            </div>
-            <div class="product" tabindex="0">
-                <img src="../images/bangles.png" alt="Double layered Pearl Bangle set">
-                <h3>Double layered Pearl Bangle set</h3>
-                <p>₹ 8,200</p>
-            </div>
-            <div class="product" tabindex="0">
-                <img src="../images/bangles.png" alt="Three layered Pearl Bangle set">
-                <h3>Three layered Pearl Bangle set</h3>
-                <p>₹ 13,000</p>
-            </div>
-            <div class="product" tabindex="0">
-                <img src="../images/bangles.png" alt="Single layered Pearl Bangle set">
-                <h3>Single layered Pearl Bangle set</h3>
-                <p>₹ 5,400</p>
-            </div>
-            <!-- Add more products as needed -->
-        </section>
-    </main>
+<main class="container">
+    <div class="sidebar">
+        <h2>Products</h2>
+        <h3>Category</h3>
+        <ul>
+            <li>Royale Pearls Collection</li>
+            <li>Rajwada Collection</li>
+            <li>Jodha Collection</li>
+            <li>Diana Collection</li>
+        </ul>
 
-    <div id="footer-container"></div>
+        <h3>Price</h3>
+        <div class="price-filter">
+            <label>Min</label>
+            <input type="text" placeholder="Min">
+            <label>Max</label>
+            <input type="text" placeholder="Max">
+            <button>&#9654;</button>
+        </div>
+    </div>
 
-    <script src="../js/load-header.js"></script>
-    <script src="../js/load-footer.js"></script>
+    <div class="products-section">
+        <div class="products-header">
+            <label for="sort">Sort By:</label>
+            <select id="sort">
+                <option>Most Recent</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+        </div>
+
+        <div class="products-grid">
+            <div class="product">
+                <img src="../images/bangles.png" alt="Fresh water Pearl tops">
+                <p class="title">Fresh water Pearl tops</p>
+                <p class="brand">Mandothiya</p>
+                <p class="price">₹ 450</p>
+            </div>
+            <div class="product">
+                <img src="../images/bangles.png" alt="Fresh water Pearl tops">
+                <p class="title">Fresh water Pearl tops</p>
+                <p class="brand">Mandothiya</p>
+                <p class="price">₹ 500</p>
+            </div>
+            <div class="product">
+                <img src="../images/bangles.png" alt="Fresh water Pearl tops">
+                <p class="title">Fresh water Pearl tops</p>
+                <p class="brand">Mandothiya</p>
+                <p class="price">₹ 950</p>
+            </div>
+            <div class="product">
+                <img src="../images/bangles.png" alt="Fresh water Pearl tops">
+                <p class="title">Fresh water Pearl tops</p>
+                <p class="brand">Mandothiya</p>
+                <p class="price">₹ 600</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="footer-container"></div>
+
+<script src="../js/load-header.js"></script>
+<script src="../js/load-footer.js"></script>
 
 </body>
+
+
 </html>

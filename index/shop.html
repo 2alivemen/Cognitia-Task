@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    main {
+      display: flex;
+      padding: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      flex: 0 0 220px;
+      max-width: 220px;
+      padding: 10px 0;
+    }
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 25px 0 10px;
+    }
+
+    .sidebar p, .sidebar label {
+      font-size: 14px;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    .price-range {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .price-range input {
+      width: 70px;
+      padding: 6px 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .products-header h2 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .sort-section {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sort-section select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 20px;
+      flex: 1;
+    }
+
+    .product {
+      background: #f8f8f8;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 14px;
+      font-weight: 500;
+      color: #c0392b;
+      margin: 0 0 6px;
+    }
+
+    .product p {
+      font-size: 13px;
+      margin: 0 0 6px;
+    }
+
+    .product-price {
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      margin-top: 6px;
+    }
+
+    /* Responsive layout */
+    @media(max-width: 1024px) {
+      .products {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        max-width: 100%;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sort-section {
+        margin-top: 15px;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="header-container"></div>
+
+  <main>
+    <section class="sidebar">
+      <h2>Products</h2>
+
+      <h3>Category</h3>
+      <p>Royale Pearls Collection</p>
+      <p>Rajwada Collection</p>
+      <p>Jodha Collection</p>
+      <p>Diana Collection</p>
+
+      <h3>Price</h3>
+      <div class="price-range">
+        <input type="text" placeholder="Min">
+        <input type="text" placeholder="Max">
+      </div>
+    </section>
+
+    <section style="flex:1">
+      <div class="products-header">
+        <h2>Products</h2>
+        <div class="sort-section">
+          <label for="sort">Sort By:</label>
+          <select id="sort">
+            <option>Most Recent</option>
+            <option>Price Low to High</option>
+            <option>Price High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <section class="products">
+        <div class="product">
+          <img src="../images/moonstonemala.png" alt="Product 1">
+          <h3>Fresh water Pearl tops</h3>
+          <p>Mandothiya</p>
+          <p>★★★★★</p>
+          <p class="product-price">₹ 450</p>
+        </div>
+
+        <div class="product">
+          <img src="../images/moonstonemala.png" alt="Product 2">
+          <h3>Fresh water Pearl tops</h3>
+          <p>Mandothiya</p>
+          <p>★★★★★</p>
+          <p class="product-price">₹ 500</p>
+        </div>
+
+        <div class="product">
+          <img src="../images/bangles.png" alt="Product 3">
+          <h3>Bangles pearl</h3>
+          <p>Mandothiya</p>
+          <p>★★★★★</p>
+          <p class="product-price">₹ 950</p>
+        </div>
+
+        <div class="product">
+          <img src="../images/bangles.png" alt="Product 4">
+          <h3>FPearl Bangles</h3>
+          <p>Mandothiya</p>
+          <p>★★★★★</p>
+          <p class="product-price">₹ 600</p>
+        </div>
+
+        <!-- Add more product cards similarly -->
+      </section>
+    </section>
+  </main>
+  <div id="footer-container"></div>
+
+  <script src="../js/load-header.js"></script>
+  <script src="../js/load-footer.js"></script>
+</body>
+</html>
