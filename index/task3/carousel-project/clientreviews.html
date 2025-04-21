@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Reviews Carousel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+
+<div class="carousel-container">
+  <div class="carousel-track">
+    <div class="carousel-slide">
+      <div class="review-text">
+        <h2>Client Reviews</h2>
+        <h4>Anshika Saini</h4>
+        <p>The Pearls are lustrous and Beautifully matched, giving the piece an elegant look.</p>
+        <a href="#">Read more</a>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review-img">
+        <img src="img1.png" alt="Review 1"/>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="review-text">
+        <h2>Client Reviews</h2>
+        <h4>Anshika Saini</h4>
+        <p>The Pearls are lustrous and Beautifully matched, giving the piece an elegant look.</p>
+        <a href="#">Read more</a>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review-img">
+        <img src="img2.png" alt="Review 2"/>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="review-text">
+        <h2>Client Reviews</h2>
+        <h4>Anshika Saini</h4>
+        <p>The Pearls are lustrous and Beautifully matched, giving the piece an elegant look.</p>
+        <a href="#">Read more</a>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="review-img">
+        <img src="img3.png" alt="Review 3"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-dots">
+    <span class="dot active" onclick="moveToSlide(0)"></span>
+    <span class="dot" onclick="moveToSlide(1)"></span>
+    <span class="dot" onclick="moveToSlide(2)"></span>
+  </div>
+</div>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const dots = document.querySelectorAll('.dot');
+
+  let currentIndex = 0;
+
+  function moveToSlide(index) {
+    const slideWidth = document.querySelector('.carousel-slide').clientWidth;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  // Optional auto-slide
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % dots.length;
+    moveToSlide(currentIndex);
+  }, 5000);
+</script>
+
+</body>
+</html>
